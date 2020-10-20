@@ -36,7 +36,7 @@ const io = socketio(expressServer);
 
 app.use(cors());
 
-const port: number = Number(process.env.PORT);
+const port: number = Number(process.env.PORT || 3002);
 
 (async () => {
   try {
