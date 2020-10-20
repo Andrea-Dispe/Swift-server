@@ -45,8 +45,8 @@ const port: number = Number(process.env.PORT || 3002);
     expressServer.listen(port, ()=> {
       console.log(`Server ready at http://localhost:${port}👍`)
       })
-    } catch (err) {
-    console.error('Error connecting to the db', err);
+    } catch (error) {
+    console.error('Error connecting to the db', error);
   }
 })();
 
