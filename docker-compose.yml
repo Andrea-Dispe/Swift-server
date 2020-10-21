@@ -4,14 +4,6 @@ networks:
   internal:
 
 services:
-  db:
-    image: postgres
-    container_name: swift-server-ajm-postgres
-    networks:
-      - internal
-    restart: always
-    ports:
-      - "5432:5432"
   web:
     build:
       context: .
@@ -25,3 +17,12 @@ services:
     depends_on:
       - db
     restart: always
+  db:
+    image: postgres
+    container_name: swift-server-ajm-postgres
+    networks:
+      - internal
+    restart: always
+    ports:
+      - "5432:5432"
+
