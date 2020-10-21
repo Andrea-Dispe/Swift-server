@@ -10,7 +10,8 @@ services:
     networks:
       - internal
     restart: always
-    ports: "5432"
+    ports:
+      - "5432"
   web:
     build:
       context: .
@@ -19,7 +20,8 @@ services:
     container_name: swift-server-ajm-web
     networks:
       - internal
-    ports: "3002"
+    ports:
+      - "3002"
     depends_on:
       - db
     restart: always
