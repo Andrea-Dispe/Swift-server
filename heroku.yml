@@ -13,5 +13,6 @@ app:
     - DB_PASSWORD=postgres
   ports:
     - "80:3002"
-  build: "Dockerfile"
-
+  build:
+    docker:
+      app: Dockerfile
