@@ -2,11 +2,9 @@ FROM node:latest
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE 80:3002
+ARG NODE_ENV=development
+ARG PORT=3002
+ENV PORT=$PORT
+EXPOSE $PORT
 CMD ["npm", "start"]
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_PASSWORD=postgres
-ENV DB_NAME=zoomapp
-ENV POSTGRES_DB=zoomapp
-ENV DB_USERNAME=zoomapp
-ENV DB_PASSWORD=zoomapp
+
