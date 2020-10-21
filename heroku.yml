@@ -2,17 +2,11 @@ db:
   image: postgres
   ports:
     - "5432:5432"
-  environment:
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=postgres
-    - POSTGRES_DB=zoomapp
-app:
-  environment:
-    - DB_NAME=zoomapp
-    - DB_USERNAME=postgres
-    - DB_PASSWORD=postgres
+  environment: Dockerfile
+web:
+  environment: Dockerfile
   ports:
     - "80:3002"
   build:
     docker:
-      app: Dockerfile
+      web: Dockerfile
