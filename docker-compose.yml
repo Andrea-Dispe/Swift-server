@@ -1,18 +1,27 @@
 version: '3.8'
+
+networks:
+  internal:
+
 services:
   db:
     image: postgres
+    container_name: swift-server-ajm-postgres
+    networks:
+      - internal
+    restart: always
     ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=zoomapp
-  app:
-    environment:
-      - DB_NAME=zoomapp
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=postgres
+  web:
+    build:
+      context: .
+      args:
+        - NODE_ENV=production
+    container_name: swift-server-ajm-web
+    networks:
+      - internal
     ports:
       - "80:3002"
-    build: .
+    depends_on:
+      - db
+    restart: always
