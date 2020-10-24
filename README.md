@@ -4,7 +4,7 @@
   <img src="assets/readmeswift.png" />
 </p>
 
-Meet Swift. Fast video meetings make simple.
+Meet Swift. Fast video meetings made simple.
 
 Swift is a minimal, cross-platform web application for fast and simple video conferencing.
 
@@ -24,7 +24,7 @@ npm install
 
 5. Enjoy!
 
-PS - the server has been deployed on Heroku!
+PS - the server has been deployed on Heroku! - FIXME
 [Heroku](http://fathomless-eyrie-92787.herokuapp.com/)
 [GraphQL endpoint](http://fathomless-eyrie-92787.herokuapp.com/graphql)
 
