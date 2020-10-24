@@ -1,9 +1,8 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import socketio from 'socket.io';
-import { Server } from 'http';
+import { createServer } from 'http';
 import cors from 'cors';
-import { ExpressPeerServer } from 'peer';
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -24,15 +23,9 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-const expressServer = new Server(app);
+const expressServer = createServer(app);
 
-const peerServer = ExpressPeerServer(expressServer, {
-  path: '/myapp'
-});
-
-app.use('/peerjs', peerServer);
-
-const io = socketio(expressServer);
+const io = socketio(expressServer, {transports: ["websocket"]});
 
 app.use(cors());
 

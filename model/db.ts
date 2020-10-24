@@ -9,7 +9,8 @@ let sequelize = new Sequelize(
   //   dialect: "postgres",
   //   host: "localhost",
   // }
-  'postgres://db:5432/zoomapp', {
+
+  'postgres://localhost:5432/zoomapp', {
     username: 'postgres',
     password: 'postgres'
   }
