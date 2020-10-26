@@ -18,21 +18,30 @@ git clone https://github.com/Andrea-Dispe/Swift-server
 ```bash
 npm install
 ```
-3. In the root, create a .env file with these environment variables - FIXME
+3. Make sure you have [Docker](https://www.docker.com/) install on your machine
 
-4. Run docker - FIXME
+4. Create a Docker image
+```bash
+docker-compose up -d
+```
+5. Start the server
+```
+npm run dev
+```
 
-5. Enjoy!
-
-PS - the server has been deployed on Heroku! - FIXME
+PS - the server is hosted on Heroku.
 [Heroku](http://fathomless-eyrie-92787.herokuapp.com/)
 [GraphQL endpoint](http://fathomless-eyrie-92787.herokuapp.com/graphql)
+
+**Pssssst!**
+
+The [Swift Client](https://github.com/Andrea-Dispe/Swift-client) is highly recommended to run the real-time web communication. 📞
 
 ## Built with
 * [ExpressJS](https://expressjs.com/)
 * [Apollo GraphQL](https://www.apollographql.com/docs/)
 * [Sequelize ORM](https://sequelize.org/)
-* [Typesript](https://www.typescriptlang.org/)
+* [Typescript](https://www.typescriptlang.org/)
 * [PeerJS](https://peerjs.com/) - For peer to peer communication
 * [Socket.io](https://socket.io/) - A Node.js library for realtime web communications
 * [Docker](https://www.docker.com/) - Container management
@@ -40,9 +49,9 @@ PS - the server has been deployed on Heroku! - FIXME
 * Powered by caffeine (and sometimes 🍷 🍻)
 
 ## Made by
-* Andrea Disperati - [Github](https://github.com/Andrea-Dispe) - [LinkedIn](https://www.linkedin.com/in/andrea-dispe/) 🇮🇹 🇨🇳
-* Justin Patterson - [Github](https://github.com/ajustinpatterson) - [LinkedIn](https://www.linkedin.com/in/ajustinpatterson/) 🇺🇸 🇪🇸
-* Mo Wong - [Github](https://github.com/ommwong) - [LinkedIn](https://www.linkedin.com/in/mowong1) 🇺🇸 🇫🇷
+* Andrea Disperati - [Github](https://github.com/Andrea-Dispe) - [LinkedIn](https://www.linkedin.com/in/andrea-dispe/) 🇮🇹 🇨🇳 🍝
+* Justin Patterson - [Github](https://github.com/ajustinpatterson) - [LinkedIn](https://www.linkedin.com/in/ajustinpatterson/) 🇺🇸 🇪🇸 🍦
+* Mo Wong - [Github](https://github.com/ommwong) - [LinkedIn](https://www.linkedin.com/in/mowong1) 🇺🇸 🇫🇷 🍜
 
 
 
