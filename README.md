@@ -30,7 +30,9 @@ npm run dev
 ```
 
 PS - the server is hosted on Heroku.
+
 [Heroku](http://fathomless-eyrie-92787.herokuapp.com/)
+
 [GraphQL endpoint](http://fathomless-eyrie-92787.herokuapp.com/graphql)
 
 **Pssssst!**
