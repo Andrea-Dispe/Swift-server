@@ -28,6 +28,9 @@ const expressServer = createServer(app);
 const io = socketio(expressServer, {transports: ["websocket"]});
 
 app.use(cors());
+app.get('/', (req, res) => {
+  console.log('hooommmmee')
+})
 
 const port: number = Number(process.env.PORT || 3002);
 
